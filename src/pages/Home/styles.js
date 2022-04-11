@@ -1,9 +1,15 @@
 import styled from 'styled-components';
 
+export const MainContainer = styled.div`
+    height:117vh;
+
+    @media screen and (max-width: 740px) {height:290vh;}
+`;
+
 export const Navbar = styled.nav`
 
     .nav-link{
-        background-color: #777CF9;margin-top: 1.5rem;width: 92%;text-decoration: none;
+        background-color: #777CF9;margin-top: 1.5rem;width: 100%;text-decoration: none;
         color: white;font-weight: 500;font-size: 1.1rem;border-radius: 0.48rem;
         margin-left: 0.5rem;
 
@@ -54,6 +60,25 @@ export const Input = styled.div`
 `;
 
 export const Article = styled.article`
-    h1{font-weight:500;font-size:2rem;}
-    p{font-weight:300;font-size:1.5rem;}
+    padding:2%;
+
+    p{font-size:1.3rem;}
+    .title{margin:0 auto;font-size:1.8rem}
+
+    .tasks{
+        margin-top:0.5rem;
+
+        .toDo{
+        display: flex;align-items:flex-start;justify-content:flex-start;flex-direction: row;
+        accent-color: #777CF9;font-size:1.4rem;
+        }
+    }
+
+    .delivered{margin-top:0.5rem;}
 `
+
+export const Footer = styled.footer`
+    padding:1%;
+
+    h1{font-size:2rem;}
+`;
